@@ -2,18 +2,24 @@ def gender
   %w(man woman).sample
 end
 
-%w(noun adj verb adv subject collection country ing ied ed er).each do |ling|
-  define_method ling do |col=0|
-    File.readlines("#{ling}.txt").sample.strip.split(' ')[col].downcase
+ROOT = File.dirname(__FILE__)
+
+Dir["#{ROOT}/dicts/*.txt"].each do |path|
+  define_method File.basename(path, '.txt') do |col=0|
+    File.readlines(path).sample.strip.split(' ')[col].downcase
   end
 end
 
-10.times do
-  sentence = eval(File.readlines("sentence.txt").sample.strip)
-  puts sentence[0].upcase + sentence[1..-1]
+require 'pry'
+
+def onion_print(text, search=nil)
+  puts text[0].upcase + text[1..-1]
 end
 
-# cat in.txt | grep -oh "\w*asdf\w*" | grep -oh "\w*asdf$" > out.txt
+
+10.times do
+  onion_print(*eval("[" + File.readlines("#{ROOT}/sentence.txt").sample.strip + "]"))
+end
 
 #Man arrested for damming butterflies
 #North Korea declares war on East Timor
@@ -32,3 +38,6 @@ end
 #Proposed bill in Micronesia legislature would allow crime to have detectives
 #Proposed bill in Brunei legislature would allow french to have pirates
 #Kosovo man arrested after flagging scrapyards so asbestos could be worn
+#Holocaust snugging video prompts Chad university student to leave school
+#Three Oman men charged with using referees to scrag mistletoe
+#Nebraska woman fights off attacker with randy presidents'
