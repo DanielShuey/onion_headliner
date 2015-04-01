@@ -1,12 +1,13 @@
-"#{country} #{gender} #{%w(arrested fired).sample} after #{ing} #{collection} so #{subject} could be #{verb}"
-"#{country} #{gender} #{%w(arrested fired).sample} after #{ing} #{collection}"
-"Senator proclaims '#{subject.capitalize} is too #{adj(1)}'"
-"North Korea declares war on #{country.capitalize}"
-"New study reveals '#{noun.capitalize} are #{er} than once thought'"
-"New bill passes through Congress allowing #{subject} to #{verb(1)}"
-"Proposed bill in #{country.capitalize} legislature would allow #{subject} to have #{subject}"
-"#{country.capitalize} woman fights off attacker with #{adj(1)} #{subject}"
-"#{subject} #{verb} video prompts #{country.capitalize} university student to leave school"
-"The decline of #{subject} is a hammer blow for #{subject}"
-"#{country} police mistake #{subject} for #{subject}"
-"Three #{country.capitalize} #{%w(women men).sample} charged with using #{subject} to #{verb(1)} #{subject}"
+"#{state} #{gender} #{%w(arrested fired).sample} after #{ing} #{collection} so #{subject} could be #{verb}", 'Police'
+"#{state} #{gender} #{%w(arrested fired).sample} after #{ing} #{collection}", 'Police'
+"Senator proclaims '#{subject.capitalize} is too #{adj(1)}'", 'Politician'
+"North Korea declares war on #{country.capitalize}", 'Kim Jong Un'
+"New study reveals '#{noun.capitalize} are #{er} than once thought'", 'Research'
+"New bill passes through Congress allowing #{subject} to #{verb(1)}", 6
+"Proposed bill in #{state.capitalize} legislature would allow #{subject} to have #{subject}", 10
+"#{state} woman fights off attacker with #{adj(1)} #{subject}", 7
+"#{subject} #{verb} video prompts #{country.capitalize} university student to leave school", 'University'
+"The decline of #{subject} is a hammer blow for #{subject}", 3
+"#{state} police mistake #{subject} for #{subject}", 'Police'
+"#{%w(two three four).sample} #{country.capitalize} #{%w(women men).sample} charged with using #{subject} to #{verb(1)} #{subject}", 6
+"#{gender} hospitalized after attempting to #{verb(1)} a #{subject}", 6
