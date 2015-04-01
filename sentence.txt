@@ -5,4 +5,5 @@
 "New study reveals '#{noun.capitalize} are #{er} than once thought'"
 "New bill passes through Congress allowing #{subject} to #{verb(1)}"
 "Proposed bill in #{country.capitalize} legislature would allow #{subject} to have #{subject}"
-"#{country} woman fights off attacker with #{adj(1)} #{subject}"
+"#{country.capitalize} woman fights off attacker with #{adj(1)} #{subject}"
+"#{subject} #{verb} video prompts #{country.capitalize} university student to leave school"
