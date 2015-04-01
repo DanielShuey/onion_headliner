@@ -1,0 +1,7 @@
+- @resource.each do |result|
+  .media
+    .media-left
+      a href="http://www.theonion.com/"
+        img.media-object src=result.thumb alt=result.search width="90px"
+    .media-body
+      p.media-heading=result.sentence
