@@ -1,0 +1,1 @@
+cut -d' ' -f2 verb.txt | sort | uniq -u > verb2.txt
