@@ -1,5 +1,7 @@
 # secret: 42f9276f7e17c1179dfe37eb04ce639a343b961c
 
+Linguistics.use(:en)
+
 class Onion
   ROOT = File.dirname(__FILE__)
 
@@ -15,8 +17,8 @@ class Onion
     end
 
     Dir["#{ROOT}/dicts/*.txt"].each do |path|
-      define_method File.basename(path, '.txt') do |col=0|
-        File.readlines(path).sample.strip.split(' ')[col].downcase
+      define_method File.basename(path, '.txt') do
+        File.readlines(path).sample.strip.downcase
       end
     end
   end
